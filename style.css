@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Arapey');
 
-html,body
-{
+html{
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -10,21 +9,36 @@ html,body
   position: relative;
   font-family: 'Arapey';
   scroll-behavior: smooth;
-  background-color: white;
-  background-image: url(background.jpg);
+  background-color: black;
+}
+
+html::after {
+  content: "";
+  background: url(background.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
 }
+
 h1 {
-  font-size: 2em;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: black;
+  color: white;
+  font-size: 4em;
   text-align: center;
   margin-top: 20%;
-  margin-left: 0.5em;
-  letter-spacing: 0.5em;
+  margin-left: 0.4em;
+  letter-spacing: 0.4em;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
+  z-index: 10;
 }
 
 section {
@@ -40,10 +54,11 @@ ul{
   list-style-type: none;
   margin-right: 1%;
   font-weight: bold;
+  z-index: 10;
 }
 ul li{
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 ul li a{
     color: #2ecc71 ;
